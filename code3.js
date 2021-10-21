@@ -11,11 +11,12 @@
 
 
 
-function invert(array) {
-  
-    if ((array)) {
-      return (-array)
-    }
-  }
+invertNumber = (values) => {
 
-  console.log(invert(2, 3))
+  const newArr = values.map(numbers =>  numbers * -1);
+
+  console.log(newArr)
+ 
+}
+
+invertNumber([1,-2,3,-4,5])

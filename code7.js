@@ -27,7 +27,7 @@ function getMiddle(s)
   if (wordLength % 2 === 0) {
       let average = wordLength / 2;
       let secondAverage = Math.round((wordLength + 1) / 2);
-      finalResult =  s.charAt(average - 1) + s.charAt(secondAverage - 1) ;
+      finalResult =  console.log(s.charAt(average - 1)) + console.log(s.charAt(secondAverage - 1)) ;
       return console.log(finalResult)
   } else {
     let average = (wordLength + 1 ) / 2;

@@ -15,9 +15,9 @@ function breakChocolate(n,m) {
     } else {
         let comprimento = n - 1;
         let largura = m - 1;
-       return console.log((comprimento * m ) + largura )
+       return (comprimento * m ) + largura 
     }
 }
   }
 
-  breakChocolate(-5,5) 
+  breakChocolate(5,5) 
