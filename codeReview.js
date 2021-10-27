@@ -304,38 +304,75 @@
 // an array as a parameter and returns the biggest number.
 // biggestNumberInArray([-1,0,3,100, 99, 2, 99]) should return 100;
 // Use at least 3 different types of javascript loops to write this:
-const array1 = [-1,0,3,100, 99, 2, 99] // should return 100
-const array2 = ['a', 3, 4, 2] // should return 4
-const array3 = [] // should return 0
+// const array1 = [-1,0,3,100, 99, 2, 99] // should return 100
+// const array2 = ['a', 3, 4, 2] // should return 4
+// const array3 = [] // should return 0
 
-function biggestNumberInArray(array) {
-    let counter = 0;
-   for( let i = 0; i < array.length; i++){
-       if(counter < array[i])
-       console.log(counter = array[i] )
-   }
-}
+// function biggestNumberInArray(array) {
+//     let counter = 0;
+//    for( let i = 0; i < array.length; i++){
+//        if(counter < array[i])
+//        console.log(counter = array[i] )
+//    }
+// }
 
 
-biggestNumberInArray(array2)
+// biggestNumberInArray(array2)
 
-function biggestNumberInArray2(arr) {
+// function biggestNumberInArray2(arr) {
 
-}
+// }
 
-function biggestNumberInArray3(arr) {
+// function biggestNumberInArray3(arr) {
 
-}
+// }
 
 
 // Question #2:
 // Write a function checkBasket() that lets you know if the item is in the basket or not
-amazonBasket = {
-  glasses: 1,
-  books: 2,
-  floss: 100
-}
+// amazonBasket = {
+//   glasses: 1,
+//   books: 2,
+//   floss: 100
+// }
 
-function checkBasket(basket, lookingFor) {
+// function checkBasket(basket, lookingFor) {
 
-}
+// }
+
+
+const promise = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve("success");
+  }, 4000)
+})
+
+promise.then((result)=>{
+  console.log(result)
+})
+.catch((err)=>{
+  console.log(err)
+})
+
+
+const urls = [
+  'http://swapi.dev/api/people/1',
+  'http://swapi.dev/api/people/2',
+  'http://swapi.dev/api/people/3',
+  'http://swapi.dev/api/people/4'
+]
+
+Promise.all(urls.map(url=>{
+  return fetch(url)
+    .then(resp=>resp.json())
+}))
+.then((results)=>{
+  console.log(results[0])
+  console.log(results[1])
+  console.log(results[2])
+  console.log(results[3])
+
+})
+.catch((err)=>{
+  console.log("Error")
+})
