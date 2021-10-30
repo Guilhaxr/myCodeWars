@@ -341,38 +341,92 @@
 // }
 
 
-const promise = new Promise((resolve, reject)=>{
-  setTimeout(()=>{
-    resolve("success");
-  }, 4000)
-})
+// const promise = new Promise((resolve, reject)=>{
+//   setTimeout(()=>{
+//     resolve("success");
+//   }, 4000)
+// })
 
-promise.then((result)=>{
-  console.log(result)
-})
-.catch((err)=>{
-  console.log(err)
-})
+// promise.then((result)=>{
+//   console.log(result)
+// })
+// .catch((err)=>{
+//   console.log(err)
+// })
+
+
+// const urls = [
+//   'http://swapi.dev/api/people/1',
+//   'http://swapi.dev/api/people/2',
+//   'http://swapi.dev/api/people/3',
+//   'http://swapi.dev/api/people/4'
+// ]
+
+// Promise.all(urls.map(url=>{
+//   return fetch(url)
+//     .then(resp=>resp.json())
+// }))
+// .then((results)=>{
+//   console.log(results[0])
+//   console.log(results[1])
+//   console.log(results[2])
+//   console.log(results[3])
+
+// })
+// .catch((err)=>{
+//   console.log("Error")
+// })
+
+
+fetch("https://jsonplaceholder.typicode.com/users/")
+  .then((response) => response.json())
+  .then(console.log);
+
+
+  const exercice1 = async() =>{
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/users/")
+      const data = await response .json();
+      console.log(data)
+    } catch (err) {
+      console.log("oppps", err)
+    }
+  
+  }
+
+
+  // #2) ADVANCED: Update the function below from the video to also have
+// async await for this line: fetch(url).then(resp => resp.json())
+// So there shouldn't be any .then() calls anymore!
+// Don't get discouraged... this is a really tough one...
+// const urls = [
+//   "https://jsonplaceholder.typicode.com/users",
+//   "https://jsonplaceholder.typicode.com/posts",
+//   "https://jsonplaceholder.typicode.com/albums",
+// ];
 
 
 const urls = [
-  'http://swapi.dev/api/people/1',
-  'http://swapi.dev/api/people/2',
-  'http://swapi.dev/api/people/3',
-  'http://swapi.dev/api/people/4'
-]
+  "https://jsonplaceholder.typicode.com/users",
+  "https://jsonplaceholdeTYPO.typicode.com/posts",
+  "https://jsonplaceholder.typicode.com/albums",
+];
 
-Promise.all(urls.map(url=>{
-  return fetch(url)
-    .then(resp=>resp.json())
-}))
-.then((results)=>{
-  console.log(results[0])
-  console.log(results[1])
-  console.log(results[2])
-  console.log(results[3])
+const getData = async function () {
+  try {
+    const [users, posts, albums] = await Promise.all(
+      urls.map( async(url) => {
+        const response = await fetch(url)
+        return response.json()
 
-})
-.catch((err)=>{
-  console.log("Error")
-})
+      })
+    );
+  
+    console.log("users", users);
+    console.log("posta", posts);
+    console.log("albums", albums);
+
+  } catch (error) {
+    console.log("opps",)
+  }
+}
