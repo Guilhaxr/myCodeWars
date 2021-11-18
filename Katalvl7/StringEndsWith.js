@@ -15,13 +15,4 @@ function solution(str, ending){
   solution('sumorai', 'rai')
 
 
-//   function solution(str, ending){
-//     const arrStr = str.split("").reverse();
-//     const arrEnd = ending.split("").reverse();
-//     if( arrStr[0] && arrStr[1] === ending[0] && ending[1]|| arrStr[0] && arrStr[1] && arrStr[2] === ending[0] && ending[1] && ending[2]){
-//         return console.log(true)
-//     } else{
-//         return console.log(false)
-//     } 
-//   }
  
