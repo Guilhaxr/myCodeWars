@@ -14,7 +14,10 @@
 function rowSumOddNumbers(n) {
 
    return console.log(Math.pow(n,3))
-   
+
 }
+
+// or
+// let rowSumOddNumbers = n => n ** 3;
 
 rowSumOddNumbers(2)
