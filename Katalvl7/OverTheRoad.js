@@ -20,12 +20,37 @@
 
 function overTheRoad(address, n){
   let newArr = [];
+  let evenArr = [];
+  let oddArr = [];
+  let indexAdress = 0;
 
+  
+ 
   for(let i = 1; i <= n + n; i++){
     newArr.push(i)
   }
+  
+    newArr.filter((e)=> {
+      if( e % 2 === 0){
+        evenArr.push(e)
+      }else {
+        oddArr.push(e)
+    }
+  })
 
-  console.log(newArr)
+  oddArr.sort((a, b)=> b-a)
+
+  
+    if(address % 2 === 0 ){
+      indexAdress = evenArr.indexOf(address);
+      return console.log(oddArr[indexAdress]);
+    }else {
+      indexAdress = oddArr.indexOf(address);
+      return console.log(evenArr[indexAdress])
+    }
+  
   }
 
-  overTheRoad(1,5)
+  overTheRoad(3,5)
+
+  //1,2,3,4,5,6,7,8,9
