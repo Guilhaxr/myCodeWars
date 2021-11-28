@@ -18,38 +18,42 @@
 // 2, 3 --> 5
 // 3, 5 --> 8
 
-function overTheRoad(address, n){
-  let newArr = [];
-  let evenArr = [];
-  let oddArr = [];
-  let indexAdress = 0;
+// function overTheRoad(address, n){
+//   let newArr = [];
+//   let evenArr = [];
+//   let oddArr = [];
+//   let indexAdress = 0;
 
   
  
-  for(let i = 1; i <= n + n; i++){
-    newArr.push(i)
-  }
+//   for(let i = 1; i <= n + n; i++){
+//     newArr.push(i)
+//   }
   
-    newArr.filter((e)=> {
-      if( e % 2 === 0){
-        evenArr.push(e)
-      }else {
-        oddArr.push(e)
-    }
-  })
+//     newArr.filter((e)=> {
+//       if( e % 2 === 0){
+//         evenArr.push(e)
+//       }else {
+//         oddArr.push(e)
+//     }
+//   })
 
-  oddArr.sort((a, b)=> b-a)
+//   oddArr.sort((a, b)=> b-a)
 
   
-    if(address % 2 === 0 ){
-      indexAdress = evenArr.indexOf(address);
-      return console.log(oddArr[indexAdress]);
-    }else {
-      indexAdress = oddArr.indexOf(address);
-      return console.log(evenArr[indexAdress])
-    }
+//     if(address % 2 === 0 ){
+//       indexAdress = evenArr.indexOf(address);
+//       return console.log(oddArr[indexAdress]);
+//     }else {
+//       indexAdress = oddArr.indexOf(address);
+//       return console.log(evenArr[indexAdress])
+//     }
   
-  }
+//   }
+
+const overTheRoad = (a, n) => console.log(2 * n - a + 1)
+
+
 
   overTheRoad(3,5)
 
