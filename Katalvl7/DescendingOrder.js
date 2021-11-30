@@ -14,10 +14,6 @@ function descendingOrder(n){
     let result = n.toString().split("").sort((a,b) => b - a).join("");
     return console.log(Number(result))
 
-    // let result = newArr.sort((a,b) => b -a);
-    // console.log(result)
-
-
   }
 
   descendingOrder(575082467)
