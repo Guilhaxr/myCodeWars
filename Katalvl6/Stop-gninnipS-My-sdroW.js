@@ -7,17 +7,34 @@
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
 function spinWords(string){
-    let counter = 0;
+    let result = [];
     let newArr = string.split(" ");
+    let arrayOfArrays = [];
     
-  
-   for( let i = 0; i < newArr.length; i++){
-    if(newArr[i].length >= 5){
-        console.log(newArr.join(" ").split("").reverse())
+    
+    while(newArr.length > 0 ){
+        let arrayElement = newArr.splice(0,1)
+        arrayOfArrays.push(arrayElement)
     }
-  
-   }
+   
+
+   for( let i = 0; i < arrayOfArrays.length; i++){
+
+    for( let j = 0; j < arrayOfArrays[i].length; j++){
+
+        if(arrayOfArrays[i][j].length < 5){
+            result.push(arrayOfArrays[i][j])
+        }
+
+        if(arrayOfArrays[i][j].length >= 5){
+                result.push(arrayOfArrays[i][j].split("").reverse().join(""))
+                
+        }
+        
+    }
     
+   }
+   return console.log(result.join(" "))
   }
 
-  spinWords("Hey fellow warriors")
+  spinWords("This is a test")
