@@ -11,21 +11,34 @@
 
 
 function digital_root(n) {
-   let newAArr = n.toString().split("").map(Number)
-   let result = [];
-    
-   result = newAArr.reduce((a, b)=>
-    a + b, 0 ).toString().split("").map(Number)
+   
+   let result = 0;
+  
+   n.toString().split("").map(numb =>{
+    result += Number(numb)
+   })
 
-    console.log(result.length)
-   do{
-    result = newAArr.reduce((a, b)=>
-    a + b, 0 ).toString().split("").map(Number);
-    let i = 0 ;
-    i++;
-   }
-    while(i < result.length)
-        console.log(result)
+   if( n < 10){
+    return console.log(result) 
+    }else{
+    digital_root(result)
+    }
+//    result = newAArr.reduce((a, b)=>
+//     a + b, 0 ).toString().split("").map(Number)
+
+//     console.log(result.length)
+//     for(let i = 0; i < result.length; i++){
+//         result =+ result[i]
+//     }
+//     console.log(result)
+//    do{
+//     result = newAArr.reduce((a, b)=>
+//     a + b, 0 ).toString().split("").map(Number);
+//     let i = 0 ;
+//     i++;
+//    }
+//     while(i < result.length)
+//         console.log(result)
   
   }
 
