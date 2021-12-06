@@ -23,23 +23,7 @@ function digital_root(n) {
     }else{
     digital_root(result)
     }
-//    result = newAArr.reduce((a, b)=>
-//     a + b, 0 ).toString().split("").map(Number)
-
-//     console.log(result.length)
-//     for(let i = 0; i < result.length; i++){
-//         result =+ result[i]
-//     }
-//     console.log(result)
-//    do{
-//     result = newAArr.reduce((a, b)=>
-//     a + b, 0 ).toString().split("").map(Number);
-//     let i = 0 ;
-//     i++;
-//    }
-//     while(i < result.length)
-//         console.log(result)
   
   }
 
-  digital_root(456)
+  digital_root(16)
