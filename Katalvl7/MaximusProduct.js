@@ -21,10 +21,10 @@
 function adjacentElementsProduct(array) {
     let result = [];
    
-    for( i= 0; i < array.length-1; i++){
-        console.log( result.push(array[i] * array[i + 1]))
-    }   
-    return console.log(Math.max(...result))
+   for(let i = 0; i < array.length-1 ; i++){
+       result.push(array[i] * array[i + 1])
+   }
+    console.log(Math.max(...result))
 }
 
 
