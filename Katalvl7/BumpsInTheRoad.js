@@ -4,20 +4,20 @@
 //  15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
 
 function bump(x){
-let counter = 0;
-let newArr = x.split("")
+    let counter = 0;
+    let newArr = x.split("")
 
-for(let i = 0; i < newArr.length; i++){
-    if(  newArr[i] === "n"  ){
-        counter++
+    for(let i = 0; i < newArr.length; i++){
+        if(  newArr[i] === "n"  ){
+            counter++
+        }
     }
-}
 
-if(counter <= 15){
-    return console.log("Woohoo!")
-}else{
-    return console.log("Car Dead")
-}
+    if(counter <= 15){
+        return console.log("Woohoo!")
+    }else{
+        return console.log("Car Dead")
+    }
 }
 
 bump("_nnnnn")
