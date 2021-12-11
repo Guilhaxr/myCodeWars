@@ -378,21 +378,21 @@
 // })
 
 
-fetch("https://jsonplaceholder.typicode.com/users/")
-  .then((response) => response.json())
-  .then(console.log);
+// fetch("https://jsonplaceholder.typicode.com/users/")
+//   .then((response) => response.json())
+//   .then(console.log);
 
 
-  const exercice1 = async() =>{
-    try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/users/")
-      const data = await response .json();
-      console.log(data)
-    } catch (err) {
-      console.log("oppps", err)
-    }
+//   const exercice1 = async() =>{
+//     try {
+//       const response = await fetch("https://jsonplaceholder.typicode.com/users/")
+//       const data = await response .json();
+//       console.log(data)
+//     } catch (err) {
+//       console.log("oppps", err)
+//     }
   
-  }
+//   }
 
 
   // #2) ADVANCED: Update the function below from the video to also have
@@ -406,27 +406,50 @@ fetch("https://jsonplaceholder.typicode.com/users/")
 // ];
 
 
-const urls = [
-  "https://jsonplaceholder.typicode.com/users",
-  "https://jsonplaceholdeTYPO.typicode.com/posts",
-  "https://jsonplaceholder.typicode.com/albums",
-];
+// const urls = [
+//   "https://jsonplaceholder.typicode.com/users",
+//   "https://jsonplaceholdeTYPO.typicode.com/posts",
+//   "https://jsonplaceholder.typicode.com/albums",
+// ];
 
-const getData = async function () {
-  try {
-    const [users, posts, albums] = await Promise.all(
-      urls.map( async(url) => {
-        const response = await fetch(url)
-        return response.json()
+// const getData = async function () {
+//   try {
+//     const [users, posts, albums] = await Promise.all(
+//       urls.map( async(url) => {
+//         const response = await fetch(url)
+//         return response.json()
 
-      })
-    );
+//       })
+//     );
   
-    console.log("users", users);
-    console.log("posta", posts);
-    console.log("albums", albums);
+//     console.log("users", users);
+//     console.log("posta", posts);
+//     console.log("albums", albums);
 
-  } catch (error) {
-    console.log("opps",)
+//   } catch (error) {
+//     console.log("opps",)
+//   }
+// }
+
+// const twoSum = (nums, target) => {
+
+//   let indexArray = [];
+//   let result = []
+//   for(let i = 0; i < nums.length; i++){
+//     indexArray.push(nums.findIndex((e)=>{
+//       e + e === target
+//     }))
+      
+//   }
+//   return indexArray
+// };
+
+// console.log(twoSum([3,2,4],6)) // => [0,1] Because nums[0] + nums[1] == 9, we return [0, 1]
+// indexArray.push(nums.indexOf(nums[i
+
+
+  for(let i = 0; i < 10; i++){
+    for(let k = 0; k < 10; k++){
+      console.log(i,k)
+    }
   }
-}
