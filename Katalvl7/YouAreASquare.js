@@ -21,21 +21,12 @@
 // 26  =>  false
 
 const isSquare = function(n){
-    let newArr = n.toString().split("").pop();
+ 
+    return Math.sqrt(n) % 1 === 0;
     
-    console.log(typeof(newArr))
-    
-    if(newArr === "2" || "3" || "7"|| "8" ){
-        return console.log(false)
-    } else {
-        return console.log(true)
-    }
-
-  
-
   }
 
-  isSquare( "0")
+  isSquare( 26)
 
 //   1,4,5,6,9,0
 //   2,3,7,8
