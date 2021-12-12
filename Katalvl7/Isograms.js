@@ -8,21 +8,18 @@
 
 function isIsogram(str){
     
-    // if( str === undefined){
-    //     return true
-    // }
-    let arr = str.toLowerCase().split("")
-    let newArr = arr.sort();
-    console.log(newArr)
-    
-    for(let i = 0; i < newArr.length - 1; i++){
-    
-            if(newArr[i] == newArr[i + 1]){
-                return false
-            }else{
-                return true
-            }
+    if(str.empty){
+        return true
     }
+    let arr = str.toLowerCase().split("");
+    let newArr = arr.sort();
+
+    for (let i = 0; i < newArr.length; i++){
+        if (newArr[i + 1] === newArr[i]  ){
+            return false
+        }
+    }
+   return true
   }
 
-  console.log(isIsogram("isIsogram"))
+  console.log(isIsogram(""))
