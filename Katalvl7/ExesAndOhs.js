@@ -30,4 +30,4 @@ function XO(str) {
 
 }
 
-console.log(XO("oo"))
+console.log(XO("ooom"))
