@@ -5,6 +5,9 @@
 
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
+
+
+// first solution 
 // function sumTwoSmallestNumbers(numbers) {  
 //     let result = [];
     
@@ -17,21 +20,23 @@
 //   const newArr = result.filter(Boolean)
 //   console.log(Math.min(...newArr))
 // }
+
+
+//second solution
 function sumTwoSmallestNumbers(numbers) { 
     numbers = numbers.sort((a, b)=> a - b)
     for (let i = 0; i < numbers.length; i++){
         console.log(numbers[i] + numbers[(i + 1)])
     }
-
  }
 
-
+// top solution
 // function sumTwoSmallestNumbers(numbers){  
 //     numbers = numbers.sort(function(a, b){return a - b; });
-//     console.log(numbers)
-//     console.log(numbers[0] + numbers[1]);
-//     console.log(numbers[2])
+//     return console.log(numbers[0] + numbers[1]);
 //   };
+
+
   console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
 
 //   console.log(numbers[i] + numbers[i + numbers.length] )
