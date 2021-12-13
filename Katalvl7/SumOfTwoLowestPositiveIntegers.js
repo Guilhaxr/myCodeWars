@@ -5,19 +5,33 @@
 
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
-function sumTwoSmallestNumbers(numbers) {  
-    let result = [];
+// function sumTwoSmallestNumbers(numbers) {  
+//     let result = [];
     
+//     for (let i = 0; i < numbers.length; i++){
+//      if(result.push(numbers[i] + numbers[i + 1]))
+//      result.push(numbers[i] + numbers[i + 2] )
+//      result.push(numbers[i] + numbers[i + 3] )
+//      result.push(numbers[i] + numbers[i + 4] )
+//   }
+//   const newArr = result.filter(Boolean)
+//   console.log(Math.min(...newArr))
+// }
+function sumTwoSmallestNumbers(numbers) { 
+    numbers = numbers.sort((a, b)=> a - b)
     for (let i = 0; i < numbers.length; i++){
-     if(result.push(numbers[i] + numbers[i + 1]))
-     result.push(numbers[i] + numbers[i + 2] )
-     result.push(numbers[i] + numbers[i + 3] )
-     result.push(numbers[i] + numbers[i + 4] )
+        console.log(numbers[i] + numbers[(i + 1)])
+    }
 
-  }
-  const newArr = result.filter(Boolean)
-console.log(Math.min(...newArr))
-}
+ }
+
+
+// function sumTwoSmallestNumbers(numbers){  
+//     numbers = numbers.sort(function(a, b){return a - b; });
+//     console.log(numbers)
+//     console.log(numbers[0] + numbers[1]);
+//     console.log(numbers[2])
+//   };
   console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]))
 
 //   console.log(numbers[i] + numbers[i + numbers.length] )
