@@ -9,21 +9,27 @@
 const createPhoneNumber = (numbers) => {
     let firstNumbs = "";
     let middleNumbs = "";
-    let lastNumbs = "";
-    
-    // for( let i = 0; i < numbers.length; i++){
-    //    firstNumb = numbers[i].slice(0, 3)
-    // }
-   firstNumbs = numbers.slice(0, 3).join("")
-   middleNumbs = numbers.slice(3, 6).join("")
-   lastNumbs = numbers.slice(6, 10).join("")
-   let result  = `(${firstNumbs}) ${middleNumbs}-${lastNumbs}`
-   console.log(result)
-
+    let lastNumbs = ""; 
    
-    //  numbers = numbers.slice(0, 3);
-     
+   firstNumbs = numbers.slice(0, 3).join("");
+   middleNumbs = numbers.slice(3, 6).join("");
+   lastNumbs = numbers.slice(6, 10).join("");
 
+   let result  = `(${firstNumbs}) ${middleNumbs}-${lastNumbs}`;
+    return result  
 }
+
+//other solution
+// function createPhoneNumber(numbers){
+//   let format = "(xxx) xxx-xxxx";
+  
+//   for(let i = 0; i < numbers.length; i++)
+//   {
+//     format = format.replace('x', numbers[i]);
+//   }
+  
+//   return format;
+// }
+
 
 createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
