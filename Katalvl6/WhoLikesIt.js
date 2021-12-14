@@ -37,4 +37,4 @@ function likes(names) {
     return  finalResult
   }
 
-  console.log(likes(["Alex", "Jacob", "Mark", "Max", "g", "HH"]))
+  console.log(likes(["Alex", "Jacob", "Mark", "Max", "g"]))
