@@ -11,8 +11,7 @@
 // (-1, 0) --> -1 (-1 + 0 = -1)
 // (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 
-function getSum( a,b )
-{
+function getSum( a,b ){
    let result = 0;
    let min = 0;
    let max = 0;

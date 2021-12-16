@@ -15,25 +15,16 @@
 function duplicateCount(text){
     let textArr = text.toLowerCase().split("").sort();
     let result = {};
-    let finalResult = 0;
-    console.log(textArr)
-
-    if( text === ""){
-        
-    }
 
     for( let i = 0; i < textArr.length; i++){
-       result[textArr[i]] = ( result[textArr[i]] || 0) + 1;
+       result[textArr[i]] = (result[textArr[i]] || 0) + 1;
+       console.log(result[textArr[i]])
+       console.log(textArr[i])
     }
+    console.log(result)
     
-//    for ( let x in result){
-//        if(result[x] >= 2){
-//            finalResult = result[x]
-//        }
-//    }
-
-    const final = Object.values(result).filter((e)=> e >= 2)
-    return final.length
+    const finalResult = Object.values(result).filter((e)=> e >= 2)
+    return finalResult.length
   }
 
-  console.log(duplicateCount("Indivisibilities"))
+  console.log(duplicateCount("aa"))
