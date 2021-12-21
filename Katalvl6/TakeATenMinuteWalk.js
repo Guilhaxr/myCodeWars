@@ -15,6 +15,7 @@ function isValidWalk(walk) {
    let we = 0;
 
 
+
    for( let i = 0; i < walk.length; i++){
        if(walk[i] === "n"){
         ns++
