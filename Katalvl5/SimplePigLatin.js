@@ -17,9 +17,6 @@ function pigIt(str){
       
        splitedWord.push(splitedWord[0] + "ay");
        splitedWord.shift();
-       
-       
-       
 
        if( newArr[i] === "!" ||  newArr[i] === "?" || newArr[i] === "."){
            finalResult.push(newArr[i])
