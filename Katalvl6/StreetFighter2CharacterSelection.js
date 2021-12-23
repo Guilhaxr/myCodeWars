@@ -2,23 +2,6 @@
 // https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/javascript
 
 
-
-
-
-
-
-
-
-//YOUR NAMES
-
-// Sasmitha
-// Victor
-// Salvo
-// Pallavi
-// Alex
-
-
-
 // https://www.codewars.com/kata/5853213063adbd1b9b0000be
 
 const fighters = [

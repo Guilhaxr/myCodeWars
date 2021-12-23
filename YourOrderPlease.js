@@ -53,5 +53,5 @@ const sortPhrase = (str)=>{
   
   console.log(sortPhrase("4of Fo1r pe6ople g3ood th5e the2"))
   
-  // CODE WARS LINK
+  // CODE WARS LINK lvl 6
   // https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/javascript
