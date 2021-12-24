@@ -32,24 +32,37 @@
 
 
 const sortPhrase = (str)=>{
-    const dividedArr = str.split(' ')
-    const final = []
-    console.log(dividedArr)
-  
-    dividedArr.forEach((word)=>{
-      const sortedWord = word.split('').sort()
-      sortedWord
-  
-  
-      const newIndex = Number(sortedWord[0] - 1)
-      console.log(newIndex)
-      final[newIndex] = word
-      console.log(final[newIndex])
-    })
-  
-    return final.join(' ')
+  let newArr = str.split(" ");
+  let finaResult = [];
+ 
+
+  for (let i = 0; i < newArr.length; i++){
+    let sortedWord = newArr[i].split("").sort();
+    
+    let newIndex = sortedWord[0] - 1;
+     finaResult[newIndex] = newArr[i]
+
+  }
+  return finaResult.join(" ")
   }
   
+
+      // const dividedArr = str.split(' ')
+    // const final = []
+    // console.log(dividedArr)
+  
+    // dividedArr.forEach((word)=>{
+    //   const sortedWord = word.split('').sort()
+    //   sortedWord
+  
+  
+    //   const newIndex = Number(sortedWord[0] - 1)
+    //   console.log(newIndex)
+    //   final[newIndex] = word
+    //   console.log(final[newIndex])
+    // })
+  
+    // return final.join(' ')
   
   console.log(sortPhrase("4of Fo1r pe6ople g3ood th5e the2"))
   
