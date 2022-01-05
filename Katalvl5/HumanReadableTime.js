@@ -52,7 +52,7 @@ function humanReadable (seconds) {;
                 myTimeSec = Math.trunc(sec)
             }
         }
-        
+
         if(myTimeSec >= 60){
             myTimeSec = 0;
         }
@@ -72,3 +72,12 @@ function humanReadable (seconds) {;
   }
 
   console.log(humanReadable(59))
+
+//   top Solution 
+
+//   function humanReadable(seconds) {
+//     var pad = function(x) { return (x < 10) ? "0"+x : x; }
+//     return pad(parseInt(seconds / (60*60))) + ":" +
+//            pad(parseInt(seconds / 60 % 60)) + ":" +
+//            pad(seconds % 60)
+//   }
