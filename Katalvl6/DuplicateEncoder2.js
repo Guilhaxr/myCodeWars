@@ -15,7 +15,7 @@
 
 function duplicateEncode(word){
 let result = {};
-// let finalResult = [];
+
 let wordArr = word.toLowerCase().split("");
 
 
