@@ -16,9 +16,8 @@ function findUniq(arr) {
     
     }
 
-    console.log(result)
     const counter = Object.keys(result);
- 
+
 
     for( let prop  in counter){
         if(result[counter[prop]] === 1){
@@ -27,9 +26,15 @@ function findUniq(arr) {
     }
   
   let finalResult =  uniqNumber.toString();
-  console.log(finalResult)
+
   return Number(finalResult)
 
   }
 
   console.log(findUniq([ 0, 0, 0.55, 0, 0 ]))
+
+//top Solution !
+//   function findUniq(arr) {
+//     arr.sort((a,b)=>a-b);
+//     return arr[0]==arr[1]?arr.pop():arr[0]
+//   }
