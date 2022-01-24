@@ -21,7 +21,7 @@ const sortArray = (array) =>{
     })
 
     //sorting the odds numbers;
-    array.sort()
+    array.sort((a, b)=> a - b)
 //    for( let i = 0; i < insert.length; i++){
 //        if( insert[i] % 2 === 0 ){
 //            array.slice(insert[i], 0, array)
